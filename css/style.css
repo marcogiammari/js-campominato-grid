@@ -10,6 +10,13 @@ body {
     color: white;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
 header nav {
     display: flex;
     justify-content: space-between;
@@ -26,14 +33,11 @@ main {
 
 #grid {
     border: 1px solid black;
-    margin: 3rem;
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(8, 4rem);
 }
 
 .square {
-    width: calc(100% / 8);
     aspect-ratio: 1/1;
     display: grid;
     place-items: center;

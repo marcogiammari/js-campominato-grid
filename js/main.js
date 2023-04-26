@@ -1,20 +1,20 @@
 // INIT
 
-gridContainer = document.getElementById("grid");
-playBtn = document.getElementById("play-btn");
+const gridContainer = document.getElementById("grid");
+const playBtn = document.getElementById("play-btn");
 
 //
 
 playBtn.addEventListener("click", function() {
     gridContainer.innerHTML = "";
-    gridSize = document.querySelector("select").value
+    const gridSize = document.querySelector("select").value
     startGame(gridSize)
 });
 
 function startGame(difficulty) {
-    console.log(difficulty)
+    
     for (let i = 1; i <= difficulty; i++) {
-        el = document.createElement("div");
+        let el = document.createElement("div");
         el.classList.add("square");
         el.innerText = i;
         el.addEventListener("click", function() {
