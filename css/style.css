@@ -33,14 +33,13 @@ main {
 
 #grid {
     border: 1px solid black;
-    display: grid;
-    grid-template-columns: repeat(8, 4rem);
     margin: 2rem 0;
     display: none;
+    height: calc(100vh - 11rem);
+    aspect-ratio: 1/1;
 }
 
 .square {
-    aspect-ratio: 1/1;
     display: grid;
     place-items: center;
     border: 1px solid black;
