@@ -26,6 +26,11 @@ header nav {
     padding: 1.5rem;
 }
 
+button,
+select {
+    padding: .25rem;
+}
+
 main {
     display: grid;
     place-items: center;

@@ -1,5 +1,4 @@
 // INIT
-
 const gridContainer = document.getElementById("grid");
 const playBtn = document.getElementById("play-btn");
 
@@ -8,22 +7,14 @@ playBtn.addEventListener("click", function () {
     // svuoto il contenuto della griglia
     gridContainer.innerHTML = "";
     gridContainer.style.display = "grid"
-    const gridSize = document.querySelector("select").value;
-    // assegno a una variabile la difficoltà scelta dell'utente e la passo come argomento alla funzione startGame
-    if (gridSize == 49) {
-        gridContainer.style.gridTemplateColumns = "repeat(7, auto)"
-    } else if (gridSize == 81) {
-        gridContainer.style.gridTemplateColumns = "repeat(9, auto)"
-    }
-    else {
-        gridContainer.style.gridTemplateColumns = "repeat(10, auto)"
-    }
-    startGame(gridSize)
+    let gridNum = document.querySelector("select").value;
+    // opzione alternativa con radice quadrata per gestire il numero di colonne
+    gridContainer.style.gridTemplateColumns = `repeat(${Math.sqrt(gridNum)}, 1fr)`;
+    startGame(gridNum)
 });
 
 // definisco startGame
 function startGame(difficulty) {
-
     for (let i = 1; i <= difficulty; i++) {
         let el = document.createElement("div");
         el.classList.add("square");
