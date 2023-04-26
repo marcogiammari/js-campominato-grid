@@ -21,7 +21,7 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 6rem;
+    height: 4rem;
     background-color: teal;
     padding: 1.5rem;
 }
@@ -35,6 +35,8 @@ main {
     border: 1px solid black;
     display: grid;
     grid-template-columns: repeat(8, 4rem);
+    margin: 2rem 0;
+    display: none;
 }
 
 .square {
@@ -45,12 +47,12 @@ main {
 }
 
 .clicked {
-    background-color: rgb(93, 0, 255);
+    background-color: rgb(4, 0, 255);
 }
 
 footer {
     background-color: teal;
-    height: 4rem;
+    height: 3rem;
     display: flex;
     place-items: center;
     padding: 1.5rem;
